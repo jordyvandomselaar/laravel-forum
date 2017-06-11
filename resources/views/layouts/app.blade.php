@@ -87,6 +87,15 @@
                 border-bottom: 0;
             }
         }
+
+        /* Sidebar */
+        #sidebar a.btn-block {
+            margin-bottom: 15px;
+        }
+
+        #sidebar .list-group {
+            margin-bottom: 0;
+        }
     </style>
 
     @yield('head')

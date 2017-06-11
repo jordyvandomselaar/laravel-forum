@@ -1,6 +1,6 @@
 <div class="panel panel-default">
     <div class="panel-body">
-        <a href="#" class="btn btn-success btn-block">New Discussion</a>
+        <a href="{{-- route('forum.discussions.create') --}}" class="btn btn-success btn-block">New Discussion</a>
 
         @if ($groups)
             <ul class="list-group">
