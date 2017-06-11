@@ -26,8 +26,14 @@
         /* Custom page header */
         .header {
             padding-bottom: 20px;
-            border-bottom: 1px solid #e5e5e5;
         }
+
+        @media screen and (min-width: 768px) {
+            .header {
+                border-bottom: 1px solid #e5e5e5;
+            }
+        }
+
         /* Make the masthead heading the same height as the navigation */
         .header h3 {
             margin-top: 0;
