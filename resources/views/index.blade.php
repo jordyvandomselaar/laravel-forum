@@ -7,7 +7,7 @@
 
         @if ($discussions)
             <ul class="list-group">
-                @each('partials.discussion', $discussions, 'discussion')
+                @each('forum::partials.discussion', $discussions, 'discussion')
             </ul>
         @else
             No discussions to display.

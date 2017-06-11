@@ -12,19 +12,19 @@
 </head>
 <body>
     <div class="container">
-        @include('partials.header')
+        @include('forum::partials.header')
 
         <div class="row">
-            <div class="col-xs-12 col-sm-9" id="sidebar">
-                @include('partials.sidebar')
+            <div class="col-xs-12 col-sm-3" id="sidebar">
+                @include('forum::partials.sidebar')
             </div>
 
-            <div class="col-xs-12 col-sm-3">
+            <div class="col-xs-12 col-sm-9">
                 @yield('content')
             </div>
         </div>
 
-        @include('partials.footer')
+        @include('forum::partials.footer')
     </div>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
