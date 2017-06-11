@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('forum::layouts.app')
 
 @section('content')
     <div class="panel panel-default">
@@ -20,7 +20,7 @@
 
         <div class="panel-body">
             <ul class="list-group">
-                @each('partials.post', $discussion->posts, 'post')
+                @each('forum::partials.post', $discussion->posts, 'post')
             </ul>
         </div>
     </div>

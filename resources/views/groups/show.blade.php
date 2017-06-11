@@ -1,4 +1,3 @@
-@extend('master.app')
 
 
 @section('content')
