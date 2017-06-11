@@ -20,10 +20,12 @@
             </div>
         </div>
 
-        <div class="panel-body">
-            <ul class="list-group">
-                @each('forum::partials.post', $discussion->posts, 'post')
-            </ul>
+        <ul class="list-group">
+            @each('forum::partials.post', $discussion->posts, 'post')
+        </ul>
+
+        <div class="panel-footer text-right">
+            <a href="{{ route('forum.posts.create') }}"></a>
         </div>
     </div>
 @endsection
