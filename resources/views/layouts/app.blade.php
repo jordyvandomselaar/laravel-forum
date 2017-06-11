@@ -96,6 +96,12 @@
         #sidebar .list-group {
             margin-bottom: 0;
         }
+
+        /* Content */
+        #content .list-group-item p.meta,
+        #content .list-group-item p.excerpt {
+            margin: 0;
+        }
     </style>
 
     @yield('head')
@@ -109,7 +115,7 @@
                 @include('forum::partials.sidebar')
             </div>
 
-            <div class="col-xs-12 col-sm-9">
+            <div class="col-xs-12 col-sm-9" id="content">
                 @yield('content')
             </div>
         </div>

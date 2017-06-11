@@ -3,7 +3,6 @@
 @section('content')
     <div class="panel panel-default">
         <div class="panel-heading">Discussions</div>
-        <div class="panel-body"></div>
 
         @if ($discussions)
             <ul class="list-group">
