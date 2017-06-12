@@ -31,7 +31,7 @@ class ForumController extends Controller
      */
     public function search(Request $request)
     {
-        $discussions = Discussion::where('title', 'like', '%' . $request->get('query') . '%')
+        $discussions = Discussion::where('title', 'like', '%'.$request->get('query').'%')
             ->paginate(10);
 
         return view('forum::search-results')->with(compact('discussions'));
