@@ -76,7 +76,7 @@
             margin-bottom: 0;
         }
 
-        /* Content */
+        /* Discussions */
         .forum.discussions #content .list-group .list-group-item p.meta {
             margin: 0;
         }
@@ -95,6 +95,14 @@
 
         .forum.discussions #content .panel-options {
             display: inline;
+        }
+
+        .forum.discussions #content .row.post {
+            display: flex;
+        }
+
+        .forum.discussions #content .row.post .user {
+            border-right: 1px solid #ddd;
         }
 
         @media screen and (min-width: 768px) {

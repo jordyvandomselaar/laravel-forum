@@ -24,9 +24,7 @@ class ForumServiceProvider extends ServiceProvider
             __DIR__.'/../config/forum.php' => config_path('forum.php'),
         ], 'config');
 
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-
-        $this->setupRoutes();
+        $this->loadAll();
     }
 
     /**
@@ -40,12 +38,14 @@ class ForumServiceProvider extends ServiceProvider
     }
 
     /**
-     * Define the application routes.
+     * Define the application migrations, routes and views.
      *
      * @return void
      */
-    public function setupRoutes()
+    public function loadAll()
     {
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'forum');
     }
 }
