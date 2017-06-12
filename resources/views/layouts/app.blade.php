@@ -96,6 +96,12 @@
         .forum.discussions #content .panel-options {
             display: inline;
         }
+
+        @media screen and (min-width: 768px) {
+            .forum.discussions #content .quick-reply .btn {
+                width: 50%;
+            }
+        }
     </style>
 
     @yield('head')
