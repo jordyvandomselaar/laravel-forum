@@ -77,15 +77,30 @@
         }
 
         /* Content */
-        .forum.forum-discussions #content .list-group-item p.meta,
-        .forum.forum-discussions #content .list-group-item p.excerpt {
+        .forum.discussions #content .list-group .list-group-item p.meta {
             margin: 0;
+        }
+
+        .forum.discussions #content .list-group .list-group-item .reply-count {
+            text-align: center;
+        }
+
+        .forum.discussions #content .list-group .list-group-item .reply-count span {
+            display: block;
+        }
+
+        .forum.discussions #content .panel-options:first-of-type {
+            margin-right: 5px;
+        }
+
+        .forum.discussions #content .panel-options {
+            display: inline;
         }
     </style>
 
     @yield('head')
 </head>
-<body>
+<body class="{{ collect(request()->segments())->implode(' ') }}">
     <div class="container">
         @include('forum::partials.header')
 
