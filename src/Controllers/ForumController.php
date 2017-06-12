@@ -21,4 +21,19 @@ class ForumController extends Controller
 
         return view('forum::index')->with(compact('groups', 'discussions'));
     }
+
+    /**
+     * Display a listing of the queried resource.
+     *
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function search(Request $request)
+    {
+        $discussions = Discussion::where('title', 'like', '%' . $request->get('query') . '%')
+            ->paginate(10);
+
+        return view('forum::search-results')->with(compact('discussions'));
+    }
 }
