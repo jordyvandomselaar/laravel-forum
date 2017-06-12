@@ -10,75 +10,75 @@
 
     <style>
         /* Space out content a bit */
-        body {
+        body.forum {
             padding-top: 20px;
             padding-bottom: 20px;
         }
 
         /* Everything gets side spacing for mobile first views */
-        .header,
-        .footer {
+        .forum .header,
+        .forum .footer {
             padding-right: 15px;
             padding-left: 15px;
         }
 
         /* Custom page header */
-        .header {
+        .forum .header {
             padding-bottom: 20px;
         }
 
         @media screen and (min-width: 768px) {
-            .header {
+            .forum .header {
                 border-bottom: 1px solid #e5e5e5;
             }
         }
 
         /* Make the masthead heading the same height as the navigation */
-        .header h3 {
+        .forum .header h3 {
             margin-top: 0;
             margin-bottom: 0;
             line-height: 40px;
         }
 
         /* Custom page footer */
-        .footer {
+        .forum .footer {
             padding-top: 19px;
             color: #777;
             border-top: 1px solid #e5e5e5;
         }
 
         /* Customize container */
-        .container-narrow > hr {
+        .forum .container-narrow > hr {
             margin: 30px 0;
         }
 
         /* Responsive: Portrait tablets and up */
         @media screen and (min-width: 768px) {
             /* Remove the padding we set earlier */
-            .header,
-            .footer {
+            .forum .header,
+            .forum .footer {
                 padding-right: 0;
                 padding-left: 0;
             }
 
             /* Space out the masthead */
-            .header {
+            .forum .header {
                 margin-bottom: 30px;
             }
         }
 
         /* Sidebar */
-        #sidebar a.btn-block {
+        .forum #sidebar a.btn-block {
             margin-bottom: 15px;
         }
 
-        #sidebar .list-group {
+        .forum #sidebar .list-group {
             margin-bottom: 0;
         }
 
         /* Content */
-        #content .list-group-item p.meta,
-        #content .list-group-item p.excerpt {
+        .forum.forum-discussions #content .list-group-item p.meta,
+        .forum.forum-discussions #content .list-group-item p.excerpt {
             margin: 0;
         }
     </style>
