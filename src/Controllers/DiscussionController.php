@@ -70,6 +70,7 @@ class DiscussionController extends Controller
         $discussion = Discussion::find($id);
         $discussion->update($request->all());
 
+        return redirect()->route('forum.discussions.show', $discussion->id);
     }
 
     /**
