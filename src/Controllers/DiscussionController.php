@@ -40,19 +40,20 @@ class DiscussionController extends Controller
     {
         $discussion = Discussion::create($request->all());
 
-        return response($discussion, 201);
+        return redirect()->route('forum.discussions.show', $discussion->id);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param int $id
-     *
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+        $discussion = Discussion::where('id', $id)->with('posts')->firstOrFail();
+
+        return redirect()->route('forum.dicussions.show', $discussion->id)->with(compact('discussion'));
     }
 
     /**
