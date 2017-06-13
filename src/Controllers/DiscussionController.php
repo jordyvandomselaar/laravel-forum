@@ -70,7 +70,6 @@ class DiscussionController extends Controller
         $discussion = Discussion::find($id);
         $discussion->update($request->all());
 
-        return response($discussion, 200);
     }
 
     /**
@@ -85,6 +84,6 @@ class DiscussionController extends Controller
         $discussion = Discussion::find($id);
         $discussion->delete();
 
-        return response($discussion, 204);
+        return redirect()->route('forum.home')->with('success', 'Discussion deleted successfully.');
     }
 }

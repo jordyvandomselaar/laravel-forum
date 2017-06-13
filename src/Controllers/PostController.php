@@ -40,7 +40,7 @@ class PostController extends Controller
     {
         $post = Post::create($request->all());
 
-        return response($post, 201);
+        return redirect()->route('forum.discussions.show', $post->discussion_id);
     }
 
     /**
@@ -68,7 +68,7 @@ class PostController extends Controller
         $post = Post::find($id);
         $post->update($request->all());
 
-        return response($post, 200);
+        return redirect()->route('forum.discussions.show', $post->discussion_id);
     }
 
     /**
@@ -81,8 +81,11 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post = Post::find($id);
+
+        $discussion_id = $post->discussion_id;
+
         $post->delete();
 
-        return response($post, 204);
+        return redirect()->route('forum.discussions.show', $post->discussion_id)->with('success', 'Post deleted successfully.');
     }
 }
