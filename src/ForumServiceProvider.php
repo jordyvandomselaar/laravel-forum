@@ -38,7 +38,7 @@ class ForumServiceProvider extends ServiceProvider
     }
 
     /**
-     * Define the application migrations, routes and views.
+     * Define the application migrations, routes, views and translations.
      *
      * @return void
      */
@@ -47,5 +47,6 @@ class ForumServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'forum');
+        $this->loadTranslationsFrom(__DIR__.'/../resources/translations', 'forum');
     }
 }
