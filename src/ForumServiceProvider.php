@@ -3,8 +3,8 @@
 namespace AndreasElia\Forum;
 
 use AndreasElia\Forum\Console\InstallCommand;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\ServiceProvider;
 
 class ForumServiceProvider extends ServiceProvider
 {
