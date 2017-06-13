@@ -4,6 +4,7 @@ namespace AndreasElia\Forum;
 
 use AndreasElia\Forum\Console\InstallCommand;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
 
 class ForumServiceProvider extends ServiceProvider
 {
@@ -25,6 +26,8 @@ class ForumServiceProvider extends ServiceProvider
         ], 'config');
 
         $this->loadAll();
+
+        View::composer('*', 'AndreasElia\Forum\ViewComposers\GroupComposer');
     }
 
     /**

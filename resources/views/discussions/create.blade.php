@@ -5,7 +5,7 @@
         <div class="panel-heading">Create Discussion</div>
 
         <div class="panel-body">
-            <form action="{{ route('discussions.store') }}" method="post">
+            <form action="{{ route('forum.discussions.store') }}" method="POST">
                 <div class="form-group">
                     <label for="group">Group</label>
                     <select name="group" id="group" class="form-control">
