@@ -25,7 +25,7 @@ class ForumServiceProvider extends ServiceProvider
             __DIR__.'/../config/forum.php' => config_path('forum.php'),
         ], 'config');
 
-        $this->loadAll();
+        $this->registerPackageNamespaces();
 
         View::composer('*', 'AndreasElia\Forum\ViewComposers\GroupComposer');
     }
@@ -45,7 +45,7 @@ class ForumServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function loadAll()
+    public function registerPackageNamespaces()
     {
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
