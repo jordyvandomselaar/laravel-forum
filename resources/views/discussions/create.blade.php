@@ -9,13 +9,13 @@
                 {{ csrf_field() }}
 
                 <div class="form-group">
-                    <label for="group">Group</label>
-                    <select name="group" id="group" class="form-control">
+                    <label for="group_id">Group</label>
+                    <select name="group_id" id="group_id" class="form-control">
                         <option selected disabled>-</option>
 
                         @if (count($groups))
                             @foreach ($groups as $group)
-                                <option value="{{ $group->slug }}">{{ $group->name }}</option>
+                                <option value="{{ $group->id }}">{{ $group->name }}</option>
                             @endforeach
                         @endif
                     </select>

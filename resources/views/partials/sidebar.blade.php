@@ -2,7 +2,7 @@
     <div class="panel-body">
         <a href="{{ route('forum.discussions.create') }}" class="btn btn-success btn-block">New Discussion</a>
 
-        @if ($groups)
+        @if (count($groups))
             <div class="list-group">
                 @foreach ($groups as $group)
                     <a href="{{ route('forum.groups.show', $group->slug) }}" class="list-group-item">

@@ -37,6 +37,8 @@ class DiscussionController extends Controller
      */
     public function store(CreateDiscussionRequest $request)
     {
+        $request['slug'] = str_slug($request->title, '-');
+
         $discussion = Discussion::create($request->all());
 
         return redirect()->route('forum.discussions.show', $discussion->id);
