@@ -4,10 +4,15 @@ Route::prefix(config('forum.prefix'))->namespace(config('forum.namespace'))->nam
     Route::get('/', 'ForumController@index')->name('home');
     Route::post('search', 'ForumController@search')->name('search');
 
-    Route::resource('groups', 'GroupController', ['store', 'update', 'destroy']);
-    Route::resource('discussions', 'DiscussionController', ['store', 'update', 'destroy']);
-    Route::resource('posts', 'PostController', ['store', 'update', 'destroy']);
+    Route::resource('groups', 'GroupController');
+    Route::resource('discussions', 'DiscussionController');
+    Route::resource('posts', 'PostController');
 
-    Route::resource('lock', 'Discussion\LockController', ['store', 'destroy']);
-    Route::resource('sticky', 'Discussion\StickyController', ['store', 'destroy']);
+    Route::resource('lock', 'Discussion\LockController', [
+        'only' => ['store', 'destroy']
+    ]);
+
+    Route::resource('sticky', 'Discussion\StickyController', [
+        'only' => ['store', 'destroy']
+    ]);
 });

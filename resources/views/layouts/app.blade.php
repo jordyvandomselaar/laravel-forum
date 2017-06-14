@@ -77,16 +77,8 @@
         }
 
         /* Discussions */
-        .forum.discussions #content .list-group .list-group-item p.meta {
+        .forum #content .list-group .list-group-item p.meta {
             margin: 0;
-        }
-
-        .forum.discussions #content .list-group .list-group-item .reply-count {
-            text-align: center;
-        }
-
-        .forum.discussions #content .list-group .list-group-item .reply-count span {
-            display: block;
         }
 
         .forum.discussions #content .panel-options:first-of-type {
