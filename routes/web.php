@@ -9,10 +9,10 @@ Route::prefix(config('forum.prefix'))->namespace(config('forum.namespace'))->nam
     Route::resource('posts', 'PostController');
 
     Route::resource('lock', 'Discussion\LockController', [
-        'only' => ['store', 'destroy']
+        'only' => ['store', 'destroy'],
     ]);
 
     Route::resource('sticky', 'Discussion\StickyController', [
-        'only' => ['store', 'destroy']
+        'only' => ['store', 'destroy'],
     ]);
 });
