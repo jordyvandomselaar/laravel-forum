@@ -6,12 +6,18 @@
 
         <div class="panel-body">
             <form action="{{ route('forum.discussions.store') }}" method="POST">
+                {{ csrf_field() }}
+
                 <div class="form-group">
                     <label for="group">Group</label>
                     <select name="group" id="group" class="form-control">
-                        @foreach ($groups as $group)
-                            <option value="{{ $group->slug }}">{{ $group->name }}</option>
-                        @endforeach
+                        <option selected disabled>-</option>
+
+                        @if (count($groups))
+                            @foreach ($groups as $group)
+                                <option value="{{ $group->slug }}">{{ $group->name }}</option>
+                            @endforeach
+                        @endif
                     </select>
                 </div>
 
@@ -22,7 +28,7 @@
 
                 <div class="form-group">
                     <label for="content">Content</label>
-                    <textarea name="content" id="content" class="form-control"></textarea>
+                    <textarea name="content" id="content" class="form-control" rows="12"></textarea>
                 </div>
 
                 <button class="btn btn-success">Submit</button>

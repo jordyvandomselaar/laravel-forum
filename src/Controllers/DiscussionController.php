@@ -25,7 +25,7 @@ class DiscussionController extends Controller
      */
     public function create()
     {
-        //
+        return view('forum::discussions.create');
     }
 
     /**
@@ -53,7 +53,7 @@ class DiscussionController extends Controller
     {
         $discussion = Discussion::where('id', $id)->with('posts')->firstOrFail();
 
-        return redirect()->route('forum.dicussions.show', $discussion->id)->with(compact('discussion'));
+        return view('forum::discussions.show')->with(compact('discussion'));
     }
 
     /**

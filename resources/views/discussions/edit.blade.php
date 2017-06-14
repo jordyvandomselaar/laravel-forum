@@ -6,6 +6,8 @@
 
         <div class="panel-body">
             <form action="{{ route('forum.discussions.update', $discussion->id) }}" method="PUT">
+                {{ csrf_field() }}
+
                 <div class="form-group">
                     <label for="group">Group</label>
                     <select name="group" id="group" class="form-control">

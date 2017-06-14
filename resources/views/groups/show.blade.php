@@ -10,12 +10,12 @@
         <div class="panel-heading">Discussions</div>
 
         <div class="panel-body">
-            @if ($discussions)
+            @if (count($group->discussions))
                 <ul class="list-group">
-                    @each('forum::partials.discussion', $discussions, 'discussion')
+                    @each('forum::partials.discussion', $group->discussions, 'discussion')
                 </ul>
             @else
-                No discussions to display.
+                No discussions to display for this group.
             @endif
         </div>
     </div>
